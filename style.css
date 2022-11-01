@@ -1,0 +1,556 @@
+/* este * significa que es universal para todos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* esto lo encontre en stack overflow y es para darle un efecto cuando bajamos clickeando un boton, solo con una linea */
+  html{
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .home{
+    background-image: linear-gradient(to top, rgb(216, 112, 147) 0%, rgb(216, 112, 147) 100%);
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .textos_home{
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .textos_home h1{
+    font-size: 60px;
+  }
+
+  .textos_home p{
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  /* se van a modificar todos los elementos a con esto, que esten en textos_home */
+  .textos_home a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: pink;
+    border-radius: 8px;
+    color: #fff;
+  }
+
+  .svg_home{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  /* estilos abarcativos para toda la pagina */
+  .contenedor,
+  .barra_contenedor_sitio{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+  }
+
+  .contendor_textos_p{
+    padding: 80px 0;
+  }
+
+  .titulo{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .titulo.izquierda{
+    text-align: left;
+  }
+
+  .titulo.derecha{
+    text-align: right;
+  }
+
+  .parrafo{
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  .cta{
+    display: inline-block;
+    text-decoration: none;
+    background-image: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: pink;
+    color: #fff;
+  }
+
+  /* galeria */
+
+  .galeria{
+    background: #f2f2f2;
+  }
+
+  .galeria_contenedor{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .galeria_contenedor>img{
+    width: 30%;
+    object-fit: 30%;
+    margin-bottom: 20px;
+    display: block;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  /* informacion pt2 */
+
+.last_section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+
+  .last_section img{
+    width: 48%;
+  }
+
+  .last_section .contenedor_textos_main{
+    width: 40%;
+  }
+
+
+  @media screen and (max-width:800px){
+    .textos_home h1{
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .titulo{
+        font-size: 35px;
+    }
+
+    .titulo.izquierda{
+        text-align: center;
+    }
+    
+    .info p{
+        text-align: center;
+    }
+
+    /* cards */
+    .card{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* galeria */
+    .galeria_contenedor>img{
+        width: 48%;
+    }
+
+    /* la parte antes de contacto */
+    .last_section img{
+        width: 90%;
+    }
+    
+    .last_section .contenedor_textos_main{
+        width: 98%;
+        margin-bottom: 20px;
+    }
+
+  }
+
+
+  /* horarios y nros de contacto  */
+
+.horarios .iconos_contenedor .iconos {
+  border-radius: .5rem;
+  padding: 2rem;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+ .horarios .heading p{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 40px;
+  font-size: 35px;
+  background-color: rgb(216, 112, 147);
+  color: #fff;
+}
+
+.heading{
+  font-weight: 300;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.horarios .iconos_contenedor .iconos h3 {
+  font-size: 2rem;
+  color: black;
+  margin-top: .5rem;
+}
+
+/* fin de horarios y nros de contacto */
+
+/* parte de productos */
+
+.producto .heading {
+  text-align: center;
+  padding: 25px 0px;
+  
+}
+
+.producto .contenedor_postre {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.producto .contenedor_postre .postre {
+  border-radius: .5rem;
+  position: relative;
+  background: #f7f7f7;
+  padding: 2rem;
+  text-align: center;
+}
+
+.producto .contenedor_postre .postre .image {
+  margin: 1rem 0;
+}
+
+.producto .contenedor_postre .postre .image img {
+  height: 15rem;
+}
+
+.producto .contenedor_postre .postre .content h3 {
+  font-size: 2rem;
+  color: #130f40;
+}
+
+.producto .contenedor_postre .postre .content .precio {
+  font-size: 2rem;
+  color: #130f40;
+}
+
+.producto .contenedor_postre .postre .content .btn {
+  display: inline-block;
+  text-decoration: none;
+  background-image: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: rgb(255, 192, 203);
+  color: #fff;
+}
+
+/* fin de parte de los productos ---------------- */
+
+
+
+
+
+    /* footer */
+
+    footer{
+      background-color: rgb(216, 112, 147);
+      color: #fff;
+      width: 100%;
+      padding: 50px 0;
+      background-size: cover;
+    }
+
+  /* contacto------------- */
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* imagen del logo */
+  
+  .container .image img {
+    width: 100%;
+    object-fit: 30%;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  /* estilo para esta seccion */
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 70%;
+    /* max-width: 400px; */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 80px;
+  }
+  
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  form div input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #c4c4c4;
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form div {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  input:focus {
+    border: 2px solid #f2796e;
+  }
+  
+  /* las reglas para la parte de contacto y botones */
+  
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .btn-1,
+  .btn-2 {
+    padding: 10px 5px;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #c4c4c4;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .btn-2 {
+    background-color: #4f70b5;
+    color: white;
+    border: 2px solid #4f70b5;
+  }
+  
+  .or {
+    text-align: center;
+  }
+  
+  .question {
+    font-size: 15px;
+  }
+  
+  span {
+    color: rgb(51, 255, 0);
+    cursor: pointer;
+  }
+  
+  /* los estilosp ara los botones, error, fallo success */
+  
+  form div i {
+    position: absolute;
+    padding: 10px;
+  }
+  
+  .success-icon,
+  .failure-icon {
+    right: 0;
+    opacity: 0;
+  }
+  
+  .failure-icon,
+  .error {
+    color: red;
+  }
+  
+  .success-icon {
+    color: green;
+  }
+  
+  .error {
+    font-size: 14.5px;
+    margin-top: 5px;
+  }
+  
+  /* los estilos para el boton de ingresar */
+  
+  button {
+    margin-top: 15px;
+    width: 100%;
+    height: 45px;
+    background-color: rgb(216, 112, 147);
+    border: 2px solid rgb(255, 192, 203);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* media queries */
+  
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    form,
+    .content {
+      width: 100%;
+    }
+  
+    .btn {
+      flex-direction: column;
+    }
+    .image {
+      height: 50vh;
+    }
+  }
+  
+  @media (max-width: 425px) {
+    form {
+      padding: 20px;
+    }
+  }
+  
+  /* fin de parte de contacto --------------- */
+
+    .redes{
+      display: grid;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+      grid-gap: 50px;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 45px 0px;
+    }
+  
+    .redes .contenedor_footer{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      text-align: right;
+    }
+
+    .redes .contenedor_footer{
+      color: #fff;
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+
+    .redes .contenedor_footer p{
+      color: #efefef;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+
+    .redes .contenedor_footer a{
+      display: inline-block;
+      text-decoration: none;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      color: #fff;
+      margin-right: 10px;
+      background-color: rgb(216, 112, 147);
+      text-align: right;
+      transition: all 300ms ease;
+    }
+
+    .contenedor_footer a:hover{
+      opacity: 0.8;
+    }
+    
+    @media screen and (max-width:800px){
+      .redes .contenedor_footer{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+        text-align: right;
+      }
+    }
+    
+    /* inicio del copyright */
+
+    .copyright{
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      padding: 0px 40px;
+    }
+
+    .copyright p{
+      margin-top: 20px;
+      color: #fff;
+    }
+
+    .copyright hr{
+      border: none;
+      height: 1px;
+      background-color: #fff;
+    }
+
+    /* fin del copyright */
+    
+    /* esto es para el boton del PDf */
+
+    .btnCrearPdf {
+      width: 5%;
+    }
+    
+    /* fin de la parte del boton del PDF */
+
+  
+
+    
