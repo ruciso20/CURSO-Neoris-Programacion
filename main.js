@@ -41,25 +41,8 @@ let engine = (id, serial, message) => {
 };
 
 /* para el pdf */
-    /* labels */
-    
-var lNombre = document.getElementById('lbnombre').innerText;
-    lNumero = document.getElementById('lbnumero').innerText;
-    lmail = document.getElementById('lbmail').innerText;
-    lPedido = document.getElementById('lbpedido').innerText;
-    lHora = document.getElementById('lbhora').innerText;
-    lDireccion = document.getElementById('lbdireccion').innerText;
-
-/* input */
-var inombre = document.getElementById('nombre').value;
-   inumero = document.getElementById('numero_telefono').value;
-   iemail = document.getElementById('email_cliente').value;
-   iplatos = document.getElementById('numero_platos').value;
-   ihora = document.getElementById('hora').value;
-   idireccion = document.getElementById('direccion').value;
-
 /* jspdf port */
-var doc = new jsPDF();
+var document = new jsPDF();
 
 /* no es una copia 100 fiel ya que con el canvas ya que va interpretando todo lo que tiene
 y va sacando de ahi todo al PDF, por lo que en algunos casos puede fallar */
