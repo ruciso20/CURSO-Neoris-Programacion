@@ -304,7 +304,7 @@
     overflow: hidden;
   }
 
-  /* estilo para esta seccion */
+  /* estilo para la seccion de contacto */
   
   form {
     display: flex;
@@ -459,6 +459,15 @@
     form {
       padding: 20px;
     }
+  }
+
+  .link {
+    text-decoration: none;
+    color: green;
+  }
+
+  .link:hover{
+    opacity: 0.8;
   }
   
   /* fin de parte de contacto --------------- */

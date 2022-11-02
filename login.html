@@ -1,0 +1,67 @@
+<!-- este fue creado porque si el usuario ya tiene una cuenta puede directamente poner iniciar 
+sesion y sera movido a esta seccion para que pueda proceder -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambar Pasteleria</title>
+    <!-- google font link para la letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!-- el link del Font Awesome, nos ayuda con el tema de la foto principal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- lo tuve que poner para que funcionara lo del google fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- el script del fontawesome para que funcionen los iconos -->
+    <script src="https://kit.fontawesome.com/eaad471e3e.js" crossorigin="anonymous"></script>
+    <!-- el script de la libreria -->
+    <script src="html2pdf.bundle.min.js"></script>
+    <!-- nuestro script JS -->
+    <script src="main.js"></script>
+    <!--  -->
+</head>
+<body>
+<section class="contacto" id="contacto">
+    <div class="container">
+      <div class="content">
+      </div>
+      <!-- el formspree es para poder registrar la cuenta 
+          con esto me llega el mail a mi correo electronico  -->
+      <form id="form" action="https://formspree.io/f/xpznolnk" method="POST">
+        <div class="social">
+          <div class="title">Iniciar Sesion</div>
+          <!-- tuve que poner esto asi porque sino se me bugeaba todo no se porque -->
+          <div class=""></div>
+        </div>
+        <!-- aca pones el mail -->
+        <div>
+          <label for="email">Mail</label>
+          <i class="far fa-envelope"></i>
+          <input type="email" name="email" id="email" placeholder="abc@gmail.com" />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+        <!-- aca pones las contraseña -->
+        <div>
+          <label for="password">Contraseña</label>
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" id="password" placeholder="Contraseña" />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+        <button type="submit" class="submit" id="submit">Ingresar</button>
+        <p>¿No tenes cuenta? <a class="link" href="index.html">Registrate</a></p>
+      </form>
+    <div class="image">
+      <img src="Img/LOGO ORIGINAL AMBAR_page-0001.jpg" alt="">
+    </div>
+    </div>
+    </section>
+</body>
+</html>
