@@ -1,3 +1,5 @@
+/* esto de la validacion lo entendi pero lo extraje de stack overflow */
+
 let id = (id) => document.getElementById(id);
 
 let classes = (classes) => document.getElementsByClassName(classes);
@@ -75,3 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
     /* como queremos que capture todo el documento ponemoes que sea document.body para que abarque todo */
+    /* intente hacer lo del PDF como se ve en el codigo pero nunca termino de funcionar
+    y jamas pude obtener la respuesta, espero que si viendo el codigo me pueden ayudar! */

@@ -1,3 +1,6 @@
+<!-- se modifico el color completo de la pagina por uno que quede mejor y pueda verse bien
+ademas se agrego un carrusel automatico de fotos que fue algo que se pidio, y ahora hay
+una correcta validacion en la parte de registro del formulario -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,12 +52,10 @@
         <div class="contenedor last_section">
             <div class="contenedor_textos_main">
                 <h2 class="titulo left">¿Quiénes Somos?</h2>
-                <p class="parrafo">Soy Agustina Petri, Pastelera Profesional recibida en el IGA en San Nicolas de los Arroyos.
-                                  Estoy muy orgullosa de poder decir que cuento con mucha experiencia profesional
-                                  y que tengo una gran valoracion por una amplia parte de mis clientes, ¡espero que seas uno de ellos!
-                                  A continuación podras ver todos los productos que tenemos disponibles para que puedas observar
-                                  y elegir, ¡muchas gracias por tu tiempo!
-                
+                <p class="parrafo" align="left"><br>Soy Agustina Petri, Pastelera Profesional recibida en el IGA en San Nicolas de los Arroyos.<br>
+                   Estoy muy orgullosa de poder decir que cuento con mucha experiencia profesional y que tengo una gran valoracion por una amplia parte de mis clientes, ¡espero que seas uno de ellos!<br>
+                   A continuación podras ver todos los productos que tenemos disponibles para que puedas observar y elegir<br>
+                   ¡muchas gracias por tu tiempo!<br>
                 </p>          
             </div>
             <img src="img/LOGO GRANDE AMBAR (HECHO CON AMOR).jpg" alt="">
@@ -73,17 +74,21 @@
     </section>
     </section>
     </section>
-    <!-- la parte de nuestros productos -->
-    <section class="galeria">
-        <div class="contenedor">    
-            <h2 class="titulo">¡Una de las propuestas mas recientes!</h2>
-            <article class="galeria_contenedor">
-                <img src="Img/los cuatro, cheese.jpeg" alt="">
-                <img src="Img/los cuatro.jpeg" alt="">
-                <img src="Img/los cuatro, choco.jpeg" alt="">
-            </article>
-        </div>
+    <!-- la parte de nuestros productos (ESTA PARTE FUE MODIFICADA Y LA HICE TIPO CARRUSEL CON FOTOS) -->
+    <!-- estuve varios dias para descubrir y hacer esto que sea automatico -->
+    <section>
+        <h2>¡Te dejamos imagenes de las nuevas propuestas!</h2>
+
+        <div class="slider-frame">
+            <ul>
+                <li><img src="Img/los cuatro, cheese.jpeg" alt=""></li>
+                <li><img src="Img/los cuatro, limon.jpeg" alt=""></li>
+                <li><img src="Img/los cuatro, choco.jpeg" alt=""></li>
+                <li><img src="Img/los cuatro, oreo.jpeg" alt=""></li>
+            </ul>
+        </div>   
     </section>
+
     <!-- fin de la parte de productos mas valorados -->
 
     <!-- parte de los productos -->
@@ -211,81 +216,78 @@
 
           <!-- FIN DE PARTE DE HORARIOS Y NRO TEL -->
     
-          <!-- formulario de contacto -->
+ <!-- formulario de contacto -->
 
-          <section class="contacto" id="contacto">
-          <div class="container">
-            <div class="content">
-            </div>
-            <!-- el formspree es para poder registrar la cuenta 
-                con esto me llega el mail a mi correo electronico  -->
-            <form id="form">
-              <div class="social">
-                <div class="title">Contactanos</div>
-                <div class="question">
-                  ¿Ya tenes una cuenta? <br />
-                  <a class="link" href="login.html">Iniciar Sesion</a>
-                </div>
-                <!-- tuve que poner esto asi porque sino se me bugeaba todo no se porque -->
-                <div class=""></div>
-              </div>
-              <!-- aca pones el nombre de usuario -->
-              <div>
-                <label for="username">Nombre de usuario</label>
-                <i class="fas fa-user"></i>
-                <input type="text" name="username" id="username" placeholder="Guillermo Petri" />
-                <i class="fas fa-exclamation-circle failure-icon"></i>
-                <i class="far fa-check-circle success-icon"></i>
-                <div class="error"></div>
-              </div>
-              <!-- aca pones el mail -->
-              <div>
-                <label for="email">Mail</label>
-                <i class="far fa-envelope"></i>
-                <input type="email" name="email" id="email" placeholder="abc@gmail.com" />
-                <i class="fas fa-exclamation-circle failure-icon"></i>
-                <i class="far fa-check-circle success-icon"></i>
-                <div class="error"></div>
-              </div>
-              <!-- aca pones las contraseña -->
-              <div>
-                <label for="password">Contraseña</label>
-                <i class="fas fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Contraseña" />
-                <i class="fas fa-exclamation-circle failure-icon"></i>
-                <i class="far fa-check-circle success-icon"></i>
-                <div class="error"></div>
-              </div>
-              <button type="submit" class="submit" id="submit">Ingresar</button>
-            </form>
-          <div class="image">
-            <img src="Img/LOGO ORIGINAL AMBAR_page-0001.jpg" alt="">
+ <section class="contacto" id="contacto">
+    <div class="container">
+      <div class="content">
+      </div>
+      <!-- el formspree es para poder registrar la cuenta 
+          con esto me llega el mail a mi correo electronico  -->
+      <form id="form">
+        <div class="social">
+          <div class="title">Contactanos</div>
+          <div class="question">
+            ¿Ya tenes una cuenta? <br />
+            <a class="link" href="login.html">Iniciar Sesion</a>
           </div>
-          </div>
-          </section>
-    <!--  fin del formulario de contacto ----------------------- -->
+          <!-- tuve que poner esto asi porque sino se me bugeaba todo no se porque -->
+          <div class=""></div>
+        </div>
+        <!-- aca pones el nombre de usuario -->
+        <div>
+          <label for="username">Nombre de usuario</label>
+          <i class="fas fa-user"></i>
+          <input type="text" name="username" id="username" placeholder="Guillermo Petri" />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+        <!-- aca pones el mail -->
+        <div>
+          <label for="email">Mail</label>
+          <i class="far fa-envelope"></i>
+          <input type="email" name="email" id="email" placeholder="abc@gmail.com" />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+        <!-- aca pones las contraseña -->
+        <div>
+          <label for="password">Contraseña</label>
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" id="password" placeholder="Contraseña" />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
+        <button type="submit" class="submit" id="submit">Ingresar</button>
+      </form>
+    <div class="image">
+      <img src="Img/LOGO ORIGINAL AMBAR_page-0001.jpg" alt="">
+    </div>
+    </div>
+    </section>
+<!--  fin del formulario de contacto ----------------------- -->
     
     <!-- parte para crear el PDF es lo que me quedo menos estetico pero no supe como ponerlo de buena forma, encima es de lo que mas tarde hacer -->
           <!-- la termine eliminando porque le sacaba estetica y no funcionaba , pero al menos quedo el codigo por si se puede llegar a arreglar -->
 
-    <!-- INICIO DEL FOOTER -->
+    <!-- INICIO DEL FOOTER otro cambio que hice ya que lo rearme para que quede responsive -->
     <footer>
-      <div class="redes">
         <div class="contenedor_footer">
+            <h3>Te dejamos nuestras redes</h3>
+            <p>¡Seguinos!</p>
+            <ul class="redes">
+                <li><a href="https://www.facebook.com/profile.php?id=100042114414124" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/APasteleriasn" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/ambar.pasteleria.sn/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
         </div>
-        <div class="contenedor_footer">
-          <h2>Seguinos</h2>
-          <a href="https://www.instagram.com/ambar.pasteleria.sn/" target="_blank" class="fa-brands fa-instagram" ></a>
-          <a href="https://www.facebook.com/profile.php?id=100042114414124" target="_blank" class="fa-brands fa-facebook"></a>
-          <a href="https://twitter.com/APasteleriasn" target="_blank" class="fa-brands fa-twitter"></a>
+        <div class="abajo_footer">
+            <p>copyright &copy;2022 Ambar Pasteleria. diseñado por <span>ruciso20</span></p>
         </div>
-      </div>
-    <div class="copyright">
-      <hr>
-      <p>Todos los derechos reservados © 2022</p>
-      <b>Ambar Pasteleria</b>
-    </div>
     </footer>
-    <!-- FIN DEL FOOTER ---------------------------- -->
+    <!-- FIN DEL FOOTER (ruciso20 es mi nick) ---------------------------- -->
 </body>
 </html>

@@ -15,7 +15,7 @@
   }
   
   .home{
-    background-image: linear-gradient(to top, rgb(216, 112, 147) 0%, rgb(216, 112, 147) 100%);
+    background-image: linear-gradient(to top, rgb(38, 179, 167) 0%, rgb(38, 179, 167) 100%);
     width: 100%;
     height: 650px;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@
     display: inline-block;
     text-decoration: none;
     padding: 12px 15px;
-    background: pink;
+    background: rgb(30, 136, 127);
     border-radius: 8px;
     color: #fff;
   }
@@ -101,30 +101,59 @@
     background-image: none;
     padding: 12px 15px;
     border-radius: 8px;
-    background: pink;
+    background: rgb(38, 179, 167);
     color: #fff;
   }
 
-  /* galeria */
 
-  .galeria{
-    background: #f2f2f2;
-  }
+  /* parte de carrusel de fotos automatico */
 
-  .galeria_contenedor{
-    display: flex;
-    flex-wrap: wrap;
-  }
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 50px;
+}
 
-  .galeria_contenedor>img{
-    width: 30%;
-    object-fit: 30%;
-    margin-bottom: 20px;
-    display: block;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);
-    cursor: pointer;
-    overflow: hidden;
-  }
+.slider-frame {
+	width: 400px;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/* fin de la parte de carrusel automatico */
+
 
   /* informacion pt2 */
 
@@ -168,11 +197,6 @@
         margin-bottom: 20px;
     }
 
-    /* galeria */
-    .galeria_contenedor>img{
-        width: 48%;
-    }
-
     /* la parte antes de contacto */
     .last_section img{
         width: 90%;
@@ -201,7 +225,7 @@
   justify-content: center;
   padding-bottom: 40px;
   font-size: 35px;
-  background-color: rgb(216, 112, 147);
+  background-color: rgb(38, 179, 167);
   color: #fff;
 }
 
@@ -218,7 +242,7 @@
   margin-top: .5rem;
 }
 
-/* fin de horarios y nros de contacto */
+/* fin de horarios y nros de contacto se modifico el background color*/
 
 /* parte de productos */
 
@@ -252,12 +276,12 @@
 
 .producto .contenedor_postre .postre .content h3 {
   font-size: 2rem;
-  color: #130f40;
+  color: black;
 }
 
 .producto .contenedor_postre .postre .content .precio {
   font-size: 2rem;
-  color: #130f40;
+  color: black;
 }
 
 .producto .contenedor_postre .postre .content .btn {
@@ -266,25 +290,16 @@
   background-image: none;
   padding: 12px 15px;
   border-radius: 8px;
-  background: rgb(255, 192, 203);
+  background: rgb(38, 179, 167);
   color: #fff;
 }
 
-/* fin de parte de los productos ---------------- */
+/* fin de parte de los productos (fue modificado los botones y el color de los productos) ---------------- */
 
 
 
 
 
-    /* footer */
-
-    footer{
-      background-color: rgb(216, 112, 147);
-      color: #fff;
-      width: 100%;
-      padding: 50px 0;
-      background-size: cover;
-    }
 
   /* contacto------------- */
 
@@ -316,6 +331,8 @@
     padding: 80px;
   }
   
+  
+
   .title {
     font-size: 25px;
     font-weight: bold;
@@ -348,36 +365,6 @@
   
   /* las reglas para la parte de contacto y botones */
   
-  .btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 15px;
-  }
-  
-  .btn-1,
-  .btn-2 {
-    padding: 10px 5px;
-    width: 100%;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #c4c4c4;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  .btn-2 {
-    background-color: #4f70b5;
-    color: white;
-    border: 2px solid #4f70b5;
-  }
-  
-  .or {
-    text-align: center;
-  }
   
   .question {
     font-size: 15px;
@@ -421,8 +408,8 @@
     margin-top: 15px;
     width: 100%;
     height: 45px;
-    background-color: rgb(216, 112, 147);
-    border: 2px solid rgb(255, 192, 203);
+    background-color: rgb(38, 179, 167);
+    border: 2px solid rgb(38, 179, 167);
     border-radius: 8px;
     color: #fff;
     font-size: 20px;
@@ -472,93 +459,86 @@
   
   /* fin de parte de contacto --------------- */
 
-    .redes{
-      display: grid;
-      max-width: 1200px;
-      margin: auto;
-      width: 100%;
-      grid-gap: 50px;
-      grid-template-columns: repeat(3, 1fr);
-      padding: 45px 0px;
-    }
-  
-    .redes .contenedor_footer{
-      width: 100%;
-      height: 100%;
+  /* parte del footer */
+
+      /* footer */
+
+
+
+  footer{
+    background: rgb(38, 179, 167);
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+  }
+  .contenedor_footer{
       display: flex;
-      justify-content: right;
       align-items: center;
-      text-align: right;
-    }
-
-    .redes .contenedor_footer{
-      color: #fff;
-      margin-bottom: 25px;
-      font-size: 20px;
-    }
-
-    .redes .contenedor_footer p{
-      color: #efefef;
-      margin-bottom: 10px;
-      text-align: right;
-    }
-
-    .redes .contenedor_footer a{
-      display: inline-block;
-      text-decoration: none;
-      width: 45px;
-      height: 45px;
-      line-height: 45px;
-      color: #fff;
-      margin-right: 10px;
-      background-color: rgb(216, 112, 147);
-      text-align: right;
-      transition: all 300ms ease;
-    }
-
-    .contenedor_footer a:hover{
-      opacity: 0.8;
-    }
-    
-    @media screen and (max-width:800px){
-      .redes .contenedor_footer{
-        width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px;
-        padding: 45px 0px;
-        text-align: right;
-      }
-    }
-    
-    /* inicio del copyright */
-
-    .copyright{
-      max-width: 1200px;
-      margin: auto;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
-      padding: 0px 40px;
-    }
-
-    .copyright p{
-      margin-top: 20px;
+  }
+  .contenedor_footer h3{
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 3rem;
+  }
+  .contenedor_footer p{
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: 14px;
+  }
+  .redes{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 3rem 0;
+  }
+  .redes li{
+      margin: 0 10px;
+  }
+  .redes a{
+      text-decoration: none;
       color: #fff;
-    }
+  }
+  .redes a i{
+      font-size: 1.1rem;
+      transition: color .4s ease;
+  
+  }
+  .redes a:hover i{
+      color: rgb(30, 136, 127);
+  }
+  
+  .abajo_footer{
+      background: rgb(30, 136, 127);
+      width: 100vw;
+      padding: 20px 0;
+      text-align: center;
+  }
+  .abajo_footer p{
+      font-size: 14px;
+      word-spacing: 2px;
+      text-transform: capitalize;
+  }
+  .abajo_footer span{
+      text-transform: uppercase;
+      opacity: .4;
+      font-weight: 200;
+  }
+  /* fin del copyright */
+  
+  /* esto es para el boton del PDf */
 
-    .copyright hr{
-      border: none;
-      height: 1px;
-      background-color: #fff;
-    }
-
-    /* fin del copyright */
+  .btnCrearPdf {
+    width: 5%;
+  }
     
-    /* esto es para el boton del PDf */
-
-    .btnCrearPdf {
-      width: 5%;
-    }
-    
-    /* fin de la parte del boton del PDF */
+    /* fin de la parte del boton del PDF (que al final no funciono) */
 
   
 
